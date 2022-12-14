@@ -1,4 +1,4 @@
-package com.allyouneed.restfulwebservice;
+package com.allyouneed.restfulwebservice.domain;
 
 public class Greeting {
     private final long id;
