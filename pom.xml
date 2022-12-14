@@ -8,12 +8,15 @@
         <version>3.0.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.liuhangfan</groupId>
+    <groupId>com.allYouNeed</groupId>
     <artifactId>SpringBoot-all-you-need</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>SpringBoot-all-you-need</name>
     <description>SpringBoot-all-you-need</description>
-
+    <packaging>pom</packaging>
+    <modules>
+        <module>RESTful-web-service</module>
+    </modules>
     <properties>
         <java.version>17</java.version>
         <spring.boot.version>3.0.0</spring.boot.version>
