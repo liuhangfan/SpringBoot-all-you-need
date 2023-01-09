@@ -28,6 +28,23 @@ public class GatewayApplication {
 						.path("/get")
 						.filters(f -> f.addRequestHeader("Hello","World"))
 						.uri(httpUri))
+//				.route(p -> p
+//						.host("*.circuitbreaker.com")
+//						.filters(f -> f.circuitBreaker(config -> config.
+//								setName("mycmd").
+//								setFallbackUri("forward:/fallback")))
+//						.uri(httpUri))
+				.build();
+	}
+
+	@Bean
+	public RouteLocator myRoutes2(RouteLocatorBuilder builder, UriConfiguration uriConfiguration){
+		String httpUri = uriConfiguration.getHttpbin();
+		return builder.routes()
+//				.route( p -> p
+//						.path("/get")
+//						.filters(f -> f.addRequestHeader("Hello","World"))
+//						.uri(httpUri))
 				.route(p -> p
 						.host("*.circuitbreaker.com")
 						.filters(f -> f.circuitBreaker(config -> config.
